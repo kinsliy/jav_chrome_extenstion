@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "视频下载插件",
+  "version": "1.0",
+  "description": "用于下载视频的Chrome插件",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "downloads",
+    "scripting",
+    "nativeMessaging"
+  ],  
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/your_icon16.png",
+      "17": "images/your_icon17.png",
+      "18": "images/your_icon18.png"
+    }
+  },
+  "icons": {
+    "16": "images/your_icon16.png",
+    "17": "images/your_icon17.png",
+    "18": "images/your_icon18.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
